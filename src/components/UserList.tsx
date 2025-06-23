@@ -11,14 +11,14 @@ interface UserListProps {
   sortDirection: "asc" | "desc";
 }
 
-export default function UserList({
+const UserList = ({
   users,
   onDelete,
   onUpdate,
   onSort,
   sortBy,
   sortDirection,
-}: UserListProps) {
+}: UserListProps) => {
   const [editingUser, setEditingUser] = useState<User | null>(null);
 
   const handleEdit = (user: User) => {
@@ -163,4 +163,6 @@ export default function UserList({
       </div>
     </div>
   );
-}
+};
+
+export default UserList;

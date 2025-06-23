@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router";
 
-export default function Navigation() {
+const Navigation = () => {
   const location = useLocation();
 
   const isActive = (path: string) => {
@@ -27,4 +27,6 @@ export default function Navigation() {
       </div>
     </nav>
   );
-}
+};
+
+export default Navigation;

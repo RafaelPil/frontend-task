@@ -1,5 +1,4 @@
 import Navigation from "./components/Navigation";
-import "./App.css";
 import { Outlet } from "react-router";
 
 function App() {

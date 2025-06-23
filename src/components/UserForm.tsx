@@ -1,17 +1,25 @@
 import { useState, useEffect } from "react";
 import type { User, UserFormData } from "../types";
 
+
 interface UserFormProps {
   onSubmit: (user: UserFormData) => void;
   editUser?: User;
   onCancel?: () => void;
 }
 
-export default function UserForm({
+interface FormErrors {
+  name?: string;
+  position?: string;
+  gender?: string;
+  age?: string;
+}
+
+const UserForm = ({
   onSubmit,
   editUser,
   onCancel,
-}: UserFormProps) {
+}: UserFormProps) => {
   const [formData, setFormData] = useState<UserFormData>({
     name: "",
     position: "",
@@ -19,7 +27,7 @@ export default function UserForm({
     age: 18,
   });
 
-  const [errors, setErrors] = useState<Partial<UserFormData>>({});
+  const [errors, setErrors] = useState<FormErrors>({});
 
   useEffect(() => {
     if (editUser) {
@@ -33,7 +41,7 @@ export default function UserForm({
   }, [editUser]);
 
   const validateForm = (): boolean => {
-    const newErrors: Partial<UserFormData> = {};
+    const newErrors: FormErrors = {};
 
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
@@ -97,7 +105,7 @@ export default function UserForm({
     setFormData((prev) => ({ ...prev, [field]: value }));
 
     // Clear errors when user starts typing
-    if (errors[field]) {
+    if (errors[field as keyof FormErrors]) {
       setErrors((prev) => ({ ...prev, [field]: undefined }));
     }
   };
@@ -183,3 +191,5 @@ export default function UserForm({
     </form>
   );
 }
+
+export default UserForm;

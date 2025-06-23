@@ -1,23 +1,19 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   color: #333;
   background: #f5f5f5;
 }
-
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
 /* Navigation */
 .navbar {
   background: #2563eb;
@@ -25,7 +21,6 @@ body {
   padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -34,17 +29,14 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 .nav-title {
   font-size: 1.5rem;
   font-weight: 600;
 }
-
 .nav-links {
   display: flex;
   gap: 1rem;
 }
-
 .nav-link {
   color: white;
   text-decoration: none;
@@ -52,12 +44,10 @@ body {
   border-radius: 4px;
   transition: background-color 0.2s;
 }
-
 .nav-link:hover,
 .nav-link.active {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 /* Main content */
 .main-content {
   flex: 1;
@@ -66,7 +56,6 @@ body {
   padding: 2rem 1rem;
   width: 100%;
 }
-
 /* Pages */
 .users-page,
 .jokes-page {
@@ -75,20 +64,17 @@ body {
   padding: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 .users-page h2,
 .jokes-page h2 {
   margin-bottom: 2rem;
   text-align: center;
   color: #333;
 }
-
 .page-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
 }
-
 /* Forms */
 .user-form {
   background: #f8f9fa;
@@ -96,17 +82,14 @@ body {
   border-radius: 8px;
   border: 1px solid #e9ecef;
 }
-
 .form-group {
   margin-bottom: 1rem;
 }
-
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
-
 .form-group input,
 .form-group select {
   width: 100%;
@@ -115,30 +98,25 @@ body {
   border-radius: 4px;
   font-size: 1rem;
 }
-
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
-
 .form-group input.error {
   border-color: #dc2626;
 }
-
 .error-message {
   color: #dc2626;
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
-
 .form-actions {
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
 }
-
 /* Buttons */
 .btn {
   padding: 0.75rem 1.5rem;
@@ -149,58 +127,46 @@ body {
   font-weight: 500;
   transition: all 0.2s;
 }
-
 .btn-primary {
   background: #2563eb;
   color: white;
 }
-
 .btn-primary:hover {
   background: #1d4ed8;
 }
-
 .btn-secondary {
   background: #6b7280;
   color: white;
 }
-
 .btn-secondary:hover {
   background: #4b5563;
 }
-
 .btn-small {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
 }
-
 .btn-edit {
   background: #059669;
   color: white;
 }
-
 .btn-edit:hover {
   background: #047857;
 }
-
 .btn-delete {
   background: #dc2626;
   color: white;
 }
-
 .btn-delete:hover {
   background: #b91c1c;
 }
-
 .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
 /* Tables */
 .table-container {
   overflow-x: auto;
 }
-
 .users-table {
   width: 100%;
   border-collapse: collapse;
@@ -209,39 +175,32 @@ body {
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-
 .users-table th,
 .users-table td {
   padding: 1rem;
   text-align: left;
   border-bottom: 1px solid #e5e7eb;
 }
-
 .users-table th {
   background: #f9fafb;
   font-weight: 600;
   color: #374151;
 }
-
 .users-table th.sortable {
   cursor: pointer;
 }
-
 .users-table th.sortable:hover {
   background: #f3f4f6;
 }
-
 .users-table tbody tr:hover {
   background: #f9fafb;
 }
-
 .gender-badge {
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.875rem;
   font-weight: 500;
 }
-
 .gender-male {
   background: #dbeafe;
   color: #1e40af;
@@ -254,12 +213,10 @@ body {
   background: #f3e8ff;
   color: #7c3aed;
 }
-
 .action-buttons {
   display: flex;
   gap: 0.5rem;
 }
-
 .table-summary {
   margin-top: 1rem;
   padding: 1rem;
@@ -268,7 +225,6 @@ body {
   font-size: 0.875rem;
   color: #6b7280;
 }
-
 /* Modal */
 .edit-form-overlay {
   position: fixed;
@@ -282,7 +238,6 @@ body {
   align-items: center;
   z-index: 1000;
 }
-
 .edit-form-modal {
   background: white;
   border-radius: 8px;
@@ -292,7 +247,6 @@ body {
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
-
 .modal-header {
   padding: 1.5rem 2rem;
   border-bottom: 1px solid #e5e7eb;
@@ -301,12 +255,10 @@ body {
   align-items: center;
   background: #f9fafb;
 }
-
 .modal-header h4 {
   margin: 0;
   font-size: 1.125rem;
 }
-
 .close-button {
   background: none;
   border: none;
@@ -314,11 +266,9 @@ body {
   cursor: pointer;
   color: #6b7280;
 }
-
 .close-button:hover {
   color: #374151;
 }
-
 .edit-form-modal .user-form {
   margin: 2rem;
   background: transparent;
@@ -326,26 +276,22 @@ body {
   box-shadow: none;
   padding: 0;
 }
-
 /* Jokes page */
 .jokes-container {
   max-width: 800px;
   margin: 0 auto;
 }
-
 .refresh-section {
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #e5e7eb;
 }
-
 .last-updated {
   margin-top: 1rem;
   color: #6b7280;
   font-size: 0.875rem;
 }
-
 .joke-card {
   background: white;
   border: 1px solid #e5e7eb;
@@ -354,31 +300,26 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
-
 .joke-header {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
-
 .joke-icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-
 .joke-meta {
   flex: 1;
 }
-
 .joke-id,
 .joke-categories {
   margin: 0;
   font-size: 0.875rem;
   color: #6b7280;
 }
-
 .joke-text {
   font-size: 1.125rem;
   line-height: 1.6;
@@ -389,21 +330,17 @@ body {
   border-radius: 4px;
   font-style: italic;
 }
-
 .joke-footer {
   text-align: right;
 }
-
 .joke-url a {
   color: #2563eb;
   text-decoration: none;
   font-size: 0.875rem;
 }
-
 .joke-url a:hover {
   text-decoration: underline;
 }
-
 .auto-refresh-info {
   background: #eff6ff;
   border: 1px solid #bfdbfe;
@@ -411,13 +348,11 @@ body {
   padding: 1rem;
   text-align: center;
 }
-
 .auto-refresh-info p {
   margin: 0.25rem 0;
   color: #1e40af;
   font-size: 0.875rem;
 }
-
 /* States */
 .loading,
 .error,
@@ -425,24 +360,19 @@ body {
   text-align: center;
   padding: 3rem 1rem;
 }
-
 .empty-state {
   color: #6b7280;
 }
-
 .empty-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-
 .error {
   color: #dc2626;
 }
-
 .loading {
   color: #6b7280;
 }
-
 /* Responsive */
 @media (max-width: 768px) {
   .nav-container {
@@ -450,8 +380,14 @@ body {
     gap: 1rem;
   }
 
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .page-content {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .main-content {
@@ -463,17 +399,133 @@ body {
     padding: 1rem;
   }
 
+  .users-page h2,
+  .jokes-page h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  /* Mobile table improvements */
+  .users-table {
+    font-size: 0.875rem;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  /* Stack action buttons vertically on very small screens */
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .action-buttons .btn-small {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  /* Form improvements for mobile */
+  .user-form {
+    padding: 1rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  /* Table summary improvements */
+  .table-summary {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  /* Modal improvements */
+  .edit-form-modal {
+    margin: 0.5rem;
+    width: calc(100% - 1rem);
+  }
+
+  .modal-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .edit-form-modal .user-form {
+    margin: 1.5rem;
+  }
+
+  /* Jokes page mobile (already good, minor improvements) */
   .joke-header {
     flex-direction: column;
     text-align: center;
   }
 
-  .form-actions {
-    flex-direction: column;
+  .joke-text {
+    font-size: 1rem;
+    padding: 0.75rem;
   }
 
+  .refresh-section {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .users-page,
+  .jokes-page {
+    padding: 0.75rem;
+  }
+
+  .main-content {
+    padding: 0.75rem;
+  }
+
+  /* Make table even more compact */
+  .users-table th,
+  .users-table td {
+    padding: 0.5rem 0.25rem;
+  }
+
+  /* Very small buttons for table actions */
+  .action-buttons .btn-small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  /* Hide less important table columns on very small screens */
+  .users-table .hide-mobile {
+    display: none;
+  }
+
+  /* Form adjustments */
+  .form-group input,
+  .form-group select {
+    padding: 0.625rem;
+    font-size: 0.9rem;
+  }
+
+  /* Modal adjustments */
   .edit-form-modal {
+    margin: 0.25rem;
+    width: calc(100% - 0.5rem);
+  }
+
+  .modal-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .modal-header h4 {
+    font-size: 1rem;
+  }
+
+  .edit-form-modal .user-form {
     margin: 1rem;
-    width: calc(100% - 2rem);
   }
 }
